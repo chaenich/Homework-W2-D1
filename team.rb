@@ -13,4 +13,8 @@ attr_accessor( :team_coach )
     team_players.push(new_player)
   end
 
+  def check_for_player(player)
+    return team_players.include?(player)
+  end
+
 end

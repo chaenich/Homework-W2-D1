@@ -38,6 +38,20 @@ class TestTeam < MiniTest::Test
     assert_equal(['Player1', 'Player2', 'Player3', 'NewPlayer'], team.team_players)
   end
 
+  def test_check_for_player_true
+    team = Team.new('Footy 3', ['Player1', 'Player2', 'Player3'], 'The_Coach')
 
+    player_exists = team.check_for_player('Player1')
+
+    assert_equal(true, player_exists)
+  end
+
+  def test_check_for_player_false
+    team = Team.new('Footy 3', ['Player1', 'Player2', 'Player3'], 'The_Coach')
+
+    player_exists = team.check_for_player('Player5')
+
+    assert_equal(false, player_exists)
+  end
 
 end
