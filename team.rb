@@ -11,7 +11,8 @@ class Team
   end
 
   def add_player(new_player)
-    @team_players.push(new_player)
+### Why does this update work when :team_players only has attr_reader attrib set?
+    team_players.push(new_player)
   end
 
   def check_for_player(player)
