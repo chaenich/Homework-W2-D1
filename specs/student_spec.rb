@@ -19,7 +19,7 @@ class TestStudent < MiniTest::Test
   def test_set_student_name
     student = Student.new('Mike Nich', 'E31')
 
-    student.set_name('Greg Nich')
+    student.student_name = 'Greg Nich'
 
     assert_equal('Greg Nich', student.student_name)
   end
@@ -27,7 +27,7 @@ class TestStudent < MiniTest::Test
   def test_set_student_cohort
     student = Student.new('Ailsa Nich', 'E31')
 
-    student.set_cohort('C32')
+    student.student_cohort = 'C32'
 
     assert_equal('C32', student.student_cohort)
   end
