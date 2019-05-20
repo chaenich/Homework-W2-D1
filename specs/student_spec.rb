@@ -32,4 +32,13 @@ class TestStudent < MiniTest::Test
     assert_equal('C32', student.student_cohort)
   end
 
+  def test_student_is_friendly
+    student = Student.new('Ailsa Nich', 'E31')
+
+    response = student.talk_to_me
+
+    assert_equal("Hey there, looking good!", response)
+  end
+
+
 end
