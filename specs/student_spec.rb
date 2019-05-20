@@ -40,5 +40,11 @@ class TestStudent < MiniTest::Test
     assert_equal("Hey there, looking good!", response)
   end
 
+  def test_say_favourite_lang
+    student = Student.new('Ally Nich', 'E31')
 
+    response = student.what_lang_do_you_love('Ruby')
+
+    assert_equal("I love Ruby!", response)
+  end
 end

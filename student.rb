@@ -11,4 +11,8 @@ attr_accessor( :student_name, :student_cohort)
     return "Hey there, looking good!"
   end
 
+  def what_lang_do_you_love(lang)
+    return "I love #{lang}!"
+  end
+
 end
