@@ -23,12 +23,11 @@ class Team
     # win: +3 points
     # draw: +1 point
     # lose: 0 points
-    if result == 'win'
-      @team_points += 3
-    elsif result == 'draw'
-      @team_points += 1
-    else
-      @team_points += 0
-    end
+    points_update = {
+      'win' => 3,
+      'draw' => 1,
+      'lose' => 0
+    }
+    @team_points += points_update[result]
   end
 end
