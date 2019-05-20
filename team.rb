@@ -9,4 +9,8 @@ attr_accessor( :team_coach )
     @team_coach = coach
   end
 
+  def add_player(new_player)
+    team_players.push(new_player)
+  end
+
 end
