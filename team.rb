@@ -1,10 +1,10 @@
 class Team
 
-# attr_accessor( :student_name, :student_cohort)
+attr_reader( :team_name, :team_players, :team_coach )
 
   def initialize(name, players, coach)
     @team_name = name
-    @team_players = players[]
+    @team_players = players
     @team_coach = coach
   end
 
