@@ -19,4 +19,9 @@ class TestLibrary < MiniTest::Test
     assert_equal("lord_of_the_rings", @book.book_dtls[:title])
   end
 
+  def test_get_book_details_by_name
+    details = @book.get_book_details_by_name("lord_of_the_rings")
+    assert_equal("lord_of_the_rings: Jeff: 01/12/16", details)
+  end
+
 end

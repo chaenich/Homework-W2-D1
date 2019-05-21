@@ -6,8 +6,11 @@ class Book
     @book_dtls = book
   end
 
-  # def get_book_name
-  #   return @tbook_dtls[:title]
-  # end
+  def get_book_details_by_name(name)
+
+    details = "#{book_dtls[:title]}: #{book_dtls[:rental_details][:student_name]}: #{book_dtls[:rental_details][:date]}"
+
+    return details
+  end
 
 end
